@@ -16,6 +16,7 @@ const config: Config = {
         'brand-foreground': 'hsl(var(--brand-foreground))',
         'brand-primary': 'hsl(var(--brand-primary))',
         'brand-secondary': 'hsl(var(--brand-secondary))',
+        'brand-sub': 'hsl(var(--brand-sub))',
       }
     },
   },
