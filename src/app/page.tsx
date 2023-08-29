@@ -1,3 +1,5 @@
+'use client'
+
 import clsx from 'clsx'
 
 const aegList = [
@@ -18,7 +20,7 @@ const aegList = [
         alt: 'image alt here',
         title: 'Taking Taste Further',
         description: "This exclusive cookbook gives you all the know-how you need We've designed it to make sure you get the most out of our products - and the best out of your food."
-    }
+    },
 ]
 
 export default function Home() {
@@ -35,7 +37,7 @@ export default function Home() {
                     'py-40'
                 ])}>
                     <img src={'/component_one/Image-01.jpg'} alt='man walking with a kid'
-                         className='col-start-1 col-end-2 row-start-1 row-end-3'/>
+                         className='col-start-1 col-end-2 row-start-1 row-end-3 object-fill'/>
                     <img src={'/component_one/Image-02.jpg'} alt='fruits'
                          className='col-start-2 col-end-3 row-start-1 row-end-2'/>
                     <img src={'/component_one/Image-03.jpg'} alt='asparagus'
@@ -64,7 +66,7 @@ export default function Home() {
                     <div className='w-full h-full min-h-[450px] grid grid-cols-3 gap-5'>
                         {
                             aegList.map(item => (
-                                <a href={''} className='flex flex-col gap-5' key={JSON.stringify(item)}>
+                                <a onClick={e => { console.log(e.target) }} className='flex flex-col gap-5' key={JSON.stringify(item)}>
                                     <img src={item.image} alt={item.alt} draggable={false} className='border-b-4 border-brand-primary mb-2' />
                                     <p className='font-bold text-md'>{item.title}</p>
                                     <p className='text-brand-sub font-sm'>{item.description}</p>
